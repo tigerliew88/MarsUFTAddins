@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MonitorService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IMonitorService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256>
+                </sp:Basic256>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict>
+                </sp:Strict>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsam:Addressing>
+          <wsp:Policy>
+            <wsam:AnonymousResponses>
+            </wsam:AnonymousResponses>
+          </wsp:Policy>
+        </wsam:Addressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MarsTestFrame.CommuniteServer" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMonitorService_OnClientTestSuiteTestCaseNamesChangeEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnClientTestSuiteTestCaseNamesChangeEvent" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnClientTestSuiteTestCaseNamesChangeEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnClientTestSuiteTestCaseNamesChangeEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnClientTestCaseListChangeEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnClientTestCaseListChangeEvent" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnClientTestCaseListChangeEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnClientTestCaseListChangeEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnClientTestCompilerEndEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnClientTestCompilerEndEvent" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnClientTestCompilerEndEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnClientTestCompilerEndEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnClientCompilerOneTestStepEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnClientCompilerOneTestStepEvent" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnClientCompilerOneTestStepEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnClientCompilerOneTestStepEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnClientWriteCurrentLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:OnClientWriteCurrentLog" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnClientWriteCurrentLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OnClientWriteCurrentLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_BeforeClientRunTestStepEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:BeforeClientRunTestStepEvent" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_BeforeClientRunTestStepEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BeforeClientRunTestStepEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_AfterClientRunTestStepEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AfterClientRunTestStepEvent" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_AfterClientRunTestStepEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AfterClientRunTestStepEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_RefreshGridStyle_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshGridStyle" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_RefreshGridStyle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshGridStyleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_BeginAddLogHint_InputMessage">
+    <wsdl:part name="parameters" element="tns:BeginAddLogHint" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_BeginAddLogHint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BeginAddLogHintResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_EndAddLogHing_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndAddLogHing" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_EndAddLogHing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndAddLogHingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnBreakPointsetEvent_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnBreakPointsetEvent" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_OnBreakPointsetEvent_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnBreakPointsetEventResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMonitorService">
+    <wsdl:operation name="OnClientTestSuiteTestCaseNamesChangeEvent">
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/OnClientTestSuiteTestCaseNamesChangeEvent" message="tns:IMonitorService_OnClientTestSuiteTestCaseNamesChangeEvent_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/OnClientTestSuiteTestCaseNamesChangeEventResponse" message="tns:IMonitorService_OnClientTestSuiteTestCaseNamesChangeEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnClientTestCaseListChangeEvent">
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/OnClientTestCaseListChangeEvent" message="tns:IMonitorService_OnClientTestCaseListChangeEvent_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/OnClientTestCaseListChangeEventResponse" message="tns:IMonitorService_OnClientTestCaseListChangeEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnClientTestCompilerEndEvent">
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/OnClientTestCompilerEndEvent" message="tns:IMonitorService_OnClientTestCompilerEndEvent_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/OnClientTestCompilerEndEventResponse" message="tns:IMonitorService_OnClientTestCompilerEndEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnClientCompilerOneTestStepEvent">
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/OnClientCompilerOneTestStepEvent" message="tns:IMonitorService_OnClientCompilerOneTestStepEvent_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/OnClientCompilerOneTestStepEventResponse" message="tns:IMonitorService_OnClientCompilerOneTestStepEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnClientWriteCurrentLog">
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/OnClientWriteCurrentLog" message="tns:IMonitorService_OnClientWriteCurrentLog_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/OnClientWriteCurrentLogResponse" message="tns:IMonitorService_OnClientWriteCurrentLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BeforeClientRunTestStepEvent">
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/BeforeClientRunTestStepEvent" message="tns:IMonitorService_BeforeClientRunTestStepEvent_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/BeforeClientRunTestStepEventResponse" message="tns:IMonitorService_BeforeClientRunTestStepEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AfterClientRunTestStepEvent">
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/AfterClientRunTestStepEvent" message="tns:IMonitorService_AfterClientRunTestStepEvent_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/AfterClientRunTestStepEventResponse" message="tns:IMonitorService_AfterClientRunTestStepEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshGridStyle">
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/RefreshGridStyle" message="tns:IMonitorService_RefreshGridStyle_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/RefreshGridStyleResponse" message="tns:IMonitorService_RefreshGridStyle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BeginAddLogHint">
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/BeginAddLogHint" message="tns:IMonitorService_BeginAddLogHint_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/BeginAddLogHintResponse" message="tns:IMonitorService_BeginAddLogHint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EndAddLogHing">
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/EndAddLogHing" message="tns:IMonitorService_EndAddLogHing_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/EndAddLogHingResponse" message="tns:IMonitorService_EndAddLogHing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OnBreakPointsetEvent">
+      <wsdl:output wsam:Action="http://tempuri.org/IMonitorService/OnBreakPointsetEvent" message="tns:IMonitorService_OnBreakPointsetEvent_OutputCallbackMessage" />
+      <wsdl:input wsam:Action="http://tempuri.org/IMonitorService/OnBreakPointsetEventResponse" message="tns:IMonitorService_OnBreakPointsetEvent_InputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IMonitorService" type="tns:IMonitorService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IMonitorService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="OnClientTestSuiteTestCaseNamesChangeEvent">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/OnClientTestSuiteTestCaseNamesChangeEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnClientTestCaseListChangeEvent">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/OnClientTestCaseListChangeEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnClientTestCompilerEndEvent">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/OnClientTestCompilerEndEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnClientCompilerOneTestStepEvent">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/OnClientCompilerOneTestStepEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnClientWriteCurrentLog">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/OnClientWriteCurrentLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeforeClientRunTestStepEvent">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/BeforeClientRunTestStepEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfterClientRunTestStepEvent">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/AfterClientRunTestStepEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefreshGridStyle">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/RefreshGridStyle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginAddLogHint">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/BeginAddLogHint" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndAddLogHing">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/EndAddLogHing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnBreakPointsetEvent">
+      <soap12:operation soapAction="http://tempuri.org/IMonitorService/OnBreakPointsetEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MonitorService">
+    <wsdl:port name="NetTcpBinding_IMonitorService" binding="tns:NetTcpBinding_IMonitorService">
+      <soap12:address location="net.tcp://localhost:9990/MARSTIGFrameMonitor" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:9990/MARSTIGFrameMonitor</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>MARQUIS1\tiger</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

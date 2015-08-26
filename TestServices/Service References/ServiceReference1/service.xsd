@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MarsTestFrame.CommuniteServer" />
+  <xs:element name="OnClientTestSuiteTestCaseNamesChangeEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTestSuite" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTestCase" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnClientTestSuiteTestCaseNamesChangeEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OnClientTestSuiteTestCaseNamesChangeEventResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnClientTestCaseListChangeEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MarsTestFrame.CommuniteServer" minOccurs="0" name="lstTestSteps" nillable="true" type="q1:ArrayOfTestStep4Services" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnClientTestCaseListChangeEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OnClientTestCaseListChangeEventResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnClientTestCompilerEndEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isError" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strErrorInfo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MarsTestFrame.CommuniteServer" minOccurs="0" name="objErrorInfo" nillable="true" type="q2:ArrayOfTestStep4Services" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnClientTestCompilerEndEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OnClientTestCompilerEndEventResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnClientCompilerOneTestStepEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MarsTestFrame.CommuniteServer" minOccurs="0" name="objCurrentCompilerTestStep" nillable="true" type="q3:TestStep4Services" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnClientCompilerOneTestStepEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OnClientCompilerOneTestStepEventResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnClientWriteCurrentLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMessage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iErrorOrNormal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnClientWriteCurrentLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OnClientWriteCurrentLogResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BeforeClientRunTestStepEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MarsTestFrame.CommuniteServer" minOccurs="0" name="objTestStepRunning" nillable="true" type="q4:TestStep4Services" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BeforeClientRunTestStepEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BeforeClientRunTestStepEventResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AfterClientRunTestStepEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MarsTestFrame.CommuniteServer" minOccurs="0" name="objTestRunning" nillable="true" type="q5:TestStep4Services" />
+        <xs:element minOccurs="0" name="iResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AfterClientRunTestStepEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AfterClientRunTestStepEventResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshGridStyle">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshGridStyleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BeginAddLogHint">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BeginAddLogHintResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EndAddLogHing">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EndAddLogHingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnBreakPointsetEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MarsTestFrame.CommuniteServer" minOccurs="0" name="lstStepsInformation" nillable="true" type="q6:ArrayOfTestStep4Services" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OnBreakPointsetEventResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <ProjectGuid>{2D6E54C7-420B-45BD-88C0-FAF8742E0A4A}</ProjectGuid>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\automationTest\Automation Workbooks\qtpAddins\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE;DEBUG;_tigerDebug;_tigerEvent;_tigerDebugMouseDown;_ShowQTPException</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>MarsUFTAddins</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics2.Shared.v7.3">
+      <HintPath>..\..\..\dotnetLib\InforagisticsLibs\dotNet2\Infragistics2.Shared.v7.3.DLL</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v7.3">
+      <HintPath>..\..\..\dotnetLib\InforagisticsLibs\dotNet2\Infragistics2.Win.UltraWinEditors.v7.3.DLL</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v7.3">
+      <HintPath>..\..\..\dotnetLib\InforagisticsLibs\dotNet2\Infragistics2.Win.UltraWinGrid.v7.3.DLL</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v7.3">
+      <HintPath>..\..\..\dotnetLib\InforagisticsLibs\dotNet2\Infragistics2.Win.UltraWinTabControl.v7.3.DLL</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v7.3">
+      <HintPath>..\..\..\dotnetLib\InforagisticsLibs\dotNet2\Infragistics2.Win.UltraWinToolbars.v7.3.DLL</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v7.3">
+      <HintPath>..\..\..\dotnetLib\InforagisticsLibs\dotNet2\Infragistics2.Win.UltraWinTree.v7.3.DLL</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v7.3">
+      <HintPath>..\..\..\dotnetLib\InforagisticsLibs\dotNet2\Infragistics2.Win.v7.3.DLL</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dotnetLib\log4net-1.2.13-bin-newkey\log4net-1.2.13\bin\net\2.0\release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Mercury.QTP.CustomServer, Version=6.5.134.0, Culture=neutral, PublicKeyToken=7d38df5e43b1c39a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="base\ReflectorForCSharp.cs" />
+    <Compile Include="base\temptest.cs" />
+    <Compile Include="source\Mars.tiger.infragistics.v12.toolbar.cs" />
+    <Compile Include="ReferenceSourceCode\MLogger.cs" />
+    <Compile Include="source\MarsTabControl.cs" />
+    <Compile Include="source\MarsTigerComboboxServer.cs" />
+    <Compile Include="source\MarsTigerServerBase.cs" />
+    <Compile Include="source\MarsTigerServerConst.cs" />
+    <Compile Include="source\MarsTigerTableServer.cs" />
+    <Compile Include="source\MarsTigerTreeView.cs" />
+    <Compile Include="source\PopupMenuControl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service References\" />
+  </ItemGroup>
+</Project>

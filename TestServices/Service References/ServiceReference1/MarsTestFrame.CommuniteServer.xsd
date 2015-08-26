@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MarsTestFrame.CommuniteServer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MarsTestFrame.CommuniteServer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfTestStep4Services">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestStep4Services" nillable="true" type="tns:TestStep4Services" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestStep4Services" nillable="true" type="tns:ArrayOfTestStep4Services" />
+  <xs:complexType name="TestStep4Services">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Keyword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Loop" type="xs:int" />
+      <xs:element minOccurs="0" name="ObjectName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuickAccess" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Row_Column" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RunID" type="xs:int" />
+      <xs:element minOccurs="0" name="SubTestInfo" nillable="true" type="tns:SubTestInfo4Services" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestStep4Services" nillable="true" type="tns:TestStep4Services" />
+  <xs:complexType name="SubTestInfo4Services">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SubActions" nillable="true" type="tns:ArrayOfTestStep4Services" />
+      <xs:element minOccurs="0" name="keyword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubTestInfo4Services" nillable="true" type="tns:SubTestInfo4Services" />
+</xs:schema>
