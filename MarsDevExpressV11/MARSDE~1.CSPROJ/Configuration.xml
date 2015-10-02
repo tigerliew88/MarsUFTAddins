@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Controls>
+  <!--<Control Type="Vendor.WinControl.ControlName"  MappedTo="SwfSimilarControl">
+    <CustomRecord>
+      <Component>
+      	<Context>AUT</Context>
+        <DllName>C:\Program Files\Vendor\MercuryCustomServers\ControlNameSrv.dll</DllName>
+        <TypeName>Vendor.MercuryCustomServers.ControlNameServer</TypeName>
+      </Component>
+    </CustomRecord>
+    <CustomReplay>
+      <Component>
+      	<Context>AUT</Context>
+        <DllName>C:\Vendor\MercuryCustomServers\ControlNameSrv.dll</DllName>
+        <TypeName>Vendor.MercuryCustomServers.ControlNameServer</TypeName>
+      </Component>
+    </CustomReplay>
+    <Settings>
+           <Parameter Name="sample name">sample value</Parameter>
+    </Settings>
+  </Control>-->
+  <!---->
+  <Control Type="Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea" MappedTo="SwfToolBar">
+    <CustomRecord>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.Toolbar</TypeName>
+
+      </Component>
+    </CustomRecord>
+    <CustomReplay>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.Toolbar</TypeName>
+      </Component>
+    </CustomReplay>
+
+  </Control>
+  <!--
+-->
+
+  <Control Type="Infragistics.Win.UltraWinToolbars.PopupMenuControlTrusted" MappedTo="SwfToolBar">
+    <CustomRecord>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsPopupMenuControl</TypeName>
+      </Component>
+    </CustomRecord>
+    <CustomReplay>
+      <Component>
+        <Context>UFT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsPopupMenuControl</TypeName>
+      </Component>
+    </CustomReplay>
+  </Control>
+
+  <Control Type="Infragistics.Win.UltraWinTabControl.UltraTabControl" MappedTo="SwfTab">
+    <CustomRecord>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTabControl</TypeName>
+      </Component>
+    </CustomRecord>
+    <CustomReplay>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTabControl</TypeName>
+      </Component>
+    </CustomReplay>
+    <!--<Settings>
+       <Parameter Name="sample name">sample value</Parameter>
+    </Settings> -->
+  </Control>
+
+  <!--Summit.Framework.View.DDownControl-->
+  <Control Type="Infragistics.Win.UltraWinEditors.UltraComboEditor" MappedTo="SwfCombobox">
+    <CustomRecord>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerComboboxServer</TypeName>
+      </Component>
+    </CustomRecord>
+    <!--
+    <CustomReplay>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerServerBase</TypeName>
+      </Component>
+    </CustomReplay>
+    -->
+    <!--<Settings>
+       <Parameter Name="sample name">sample value</Parameter>
+    </Settings> -->
+  </Control>
+
+
+  <!--Summit.Framework.Desktop.Explorer-->
+  <!--
+  <Control Type="Summit.Framework.Desktop.Explorer" MappedTo="SwfTreeView">
+    <CustomRecord>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerServerBase</TypeName>
+      </Component>
+    </CustomRecord>
+    <CustomReplay>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerTreeViewRep</TypeName>
+      </Component>
+    </CustomReplay>
+  </Control>
+-->
+  <!--
+    Summit.Framework.View.SpreadsheetControl
+    Summit.Framework.DesktopContent.BaseSpreadsheetControl
+    Summit.Framework.View.SerializedDataSpreadsheetControl
+    Infragistics.Win.UltraWinGrid.UltraGrid
+    -->
+  <Control Type="Infragistics.Win.UltraWinGrid.UltraGrid" MappedTo="SwfTable">
+    <!--
+      <CustomRecord>
+        <Component>
+          <Context>AUT</Context>
+          <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+          <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerTableServer</TypeName>
+        </Component>
+      </CustomRecord>
+-->
+    <CustomReplay>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerTableServer</TypeName>
+      </Component>
+    </CustomReplay>
+
+  </Control>
+  <!--
+  <Control Type="Summit.Framework.View.SerializedDataSpreadsheetControl" MappedTo="SwfTable">
+  
+      <CustomRecord>
+        <Component>
+          <Context>AUT</Context>
+          <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+          <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerTableServer</TypeName>
+        </Component>
+      </CustomRecord>
+
+    <CustomReplay>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerTableServer</TypeName>
+      </Component>
+    </CustomReplay>
+
+  </Control>
+-->
+  <!--
+      Infragistics.Win.ValueListDropDownUnsafe
+      Infragistics.Win.EmbeddableTextBoxWithUIPermissions
+    -->
+  <Control Type="Sophis.Util.GUI.CustomTreeList" MappedTo="SwfTreeView">
+    <!--
+      <CustomRecord>
+        <Component>
+          <Context>AUT</Context>
+          <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+          <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerTableServer</TypeName>
+        </Component>
+      </CustomRecord>
+-->
+    <CustomReplay>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.tiger.SophisDevExpress.TreeViewServer</TypeName>
+      </Component>
+    </CustomReplay>
+
+  </Control>
+
+  <Control Type="DevExpress.XtraTreeList.TreeList" MappedTo="SwfTreeView">
+    <!--
+      <CustomRecord>
+        <Component>
+          <Context>AUT</Context>
+          <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+          <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerTableServer</TypeName>
+        </Component>
+      </CustomRecord>
+-->
+    <CustomReplay>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.tiger.SophisDevExpress.TreeViewServer</TypeName>
+      </Component>
+    </CustomReplay>
+
+  </Control>
+
+  <Control Type="DevExpress.XtraBars.Controls.PopupMenuBarControl" MappedTo="swfObject">
+    <!--
+      <CustomRecord>
+        <Component>
+          <Context>AUT</Context>
+          <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+          <TypeName>MarsUFTAddins.IMars.tiger.infragistics.v12.MarsTigerTableServer</TypeName>
+        </Component>
+      </CustomRecord>
+-->
+    <CustomReplay>
+      <Component>
+        <Context>AUT</Context>
+        <DllName>C:\automationTest\Automation Workbooks\qtpAddins\Current\MarsUFTAddinsCLR.dll</DllName>
+        <TypeName>MarsUFTAddins.source.sophis.MarsTigerSophisDevExprsMenu</TypeName>
+      </Component>
+    </CustomReplay>
+
+  </Control>
+
+  <Control Type="DevExpress.XtraBars.Docking.ControlContainer" MappedTo="swfWindow">
+  </Control>
+
+</Controls>
